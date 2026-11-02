@@ -1,0 +1,31 @@
+name: ShowcaseDemo
+options:
+  deploymentTarget:
+    iOS: "18.0"
+packages:
+  WhisperKit:
+    url: https://github.com/argmaxinc/WhisperKit
+    exactVersion: 0.18.0
+targets:
+  ShowcaseDemo:
+    type: application
+    platform: iOS
+    configFiles:
+      Debug: Local.xcconfig
+      Release: Local.xcconfig
+    sources:
+      - App
+      - Core
+      - path: Models
+        type: folder
+    dependencies:
+      - package: WhisperKit
+    settings:
+      base:
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_VERSION: "5.0"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "Listens to German speech to show it as text. Nothing is recorded or saved."
+        INFOPLIST_KEY_CFBundleDisplayName: Showcase
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait

@@ -1,0 +1,3 @@
+// Personal build values. Git-ignored. Copy to Local.xcconfig and fill in your own.
+PRODUCT_BUNDLE_IDENTIFIER = com.example.showcase
+DEVELOPMENT_TEAM = YOUR_TEAM_ID
